@@ -12,11 +12,15 @@ class Director:
 
     def start_game(self):
         print("Welcome to the Sudoku Game!")
+
         while self.is_playing:
             # displays sudoku grid
             # TODO: display sudoku grid
-            self.sudoku
+            # self.sudoku.print_board()
             # displays actions for the user to choose
             self.action.actions()
+            self.action.todo()
+            if self.action.instruction == 3:
+                break
 
         self.is_playing = False

@@ -10,10 +10,12 @@ class SelectAction:
 
     def actions(self):
         "Displays action. User enters a number."
+        print()
         print("1. Play game")
         print("2. Delete a number")
         print("3. Exit game")
-        self.instruction = input(int("Enter a number, selecting an action: "))
+        print()
+        self.instruction = int(input("Enter a number, selecting an action: "))
 
 
 class Action(SelectAction):
@@ -25,6 +27,7 @@ class Action(SelectAction):
 
     def todo(self):
         "Determines what to do according to user's input"
+
         if self.instruction == 1:
             print(self.prompt.input())
 
