@@ -17,7 +17,7 @@ class Sudoku:
     # col_letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
     # row_nums = [1,2,3,4,5,6,7,8,9]
 
-    def game_grid_maker(grid, difficulty_variable=4):
+    def game_grid_maker(self, grid, difficulty_variable=4):
         # This function takes an answer grid and removes a certain amount of variables from each line (difficulty variable)
         game_grid = []  # The grid that the player will see
         for row in grid:
@@ -33,11 +33,11 @@ class Sudoku:
             game_grid.append(row)
         return game_grid  # now we have our game grid
 
-    def print_board(grid, rows=constants.ROW_NUMBERS, cols=constants.COLUMN_LETTERS):
-        # This function prints the board
+    def print_board(self, grid, rows=constants.ROW_NUMBERS, cols=constants.COLUMN_LETTERS):
+        # This function prints the board.
         # print the breakers and spacers in between each number and line of numbers
-        breaker = "  ⋕---+---+---⋕---+---+---⋕---+---+---#" #ʜ⋕
-        breaker_thick = "  ⋕===+===+===⋕===+===+===⋕===+===+===#"
+        breaker = "  ⋕---+---+---⋕---+---+---⋕---+---+---⋕" #ʜ⋕
+        breaker_thick = "  ⋕===+===+===⋕===+===+===⋕===+===+===⋕"
         spacers = [" ", " | ", " | ", " ‖ ", " | ", " | ",  " ‖ ", " | ",  " | " ]
         counter = 0
         print(" ", end="")
@@ -57,4 +57,4 @@ class Sudoku:
                 print(f"{breaker}")
             counter += 1
     # printing the grid for testing purposes.
-    print_board(game_grid_maker(answer_grid))
+    # print_board(game_grid_maker(constants.ANSWER_GRID))
