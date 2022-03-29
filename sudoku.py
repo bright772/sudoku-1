@@ -1,5 +1,5 @@
 from random import randint
-
+import constants
 
 class Sudoku:
     # Create the answer grid. This is the solution for the puzzle.
@@ -14,8 +14,8 @@ class Sudoku:
         [7, 6, 1, 2, 5, 3, 9, 4, 8],
         [8, 3, 5, 4, 9, 1, 6, 7, 2],
     ]
-    col_letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
-    row_nums = [1,2,3,4,5,6,7,8,9]
+    # col_letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+    # row_nums = [1,2,3,4,5,6,7,8,9]
 
     def game_grid_maker(grid, difficulty_variable=4):
         # This function takes an answer grid and removes a certain amount of variables from each line (difficulty variable)
@@ -33,7 +33,7 @@ class Sudoku:
             game_grid.append(row)
         return game_grid  # now we have our game grid
 
-    def print_board(grid, rows=row_nums, cols=col_letters):
+    def print_board(grid, rows=constants.ROW_NUMBERS, cols=constants.COLUMN_LETTERS):
         # This function prints the board
         # print the breakers and spacers in between each number and line of numbers
         breaker = "  ⋕---+---+---⋕---+---+---⋕---+---+---#" #ʜ⋕
