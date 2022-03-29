@@ -1,6 +1,6 @@
-from action import SelectAction
 from action import Action
 from sudoku import Sudoku
+from sudoku_handling import Handling
 import constants
 
 
@@ -10,6 +10,7 @@ class Director:
         self.is_playing = True
         self.action = Action()
         self.sudoku = Sudoku()
+        self.handling = Handling()
         constants.GAME_GRID = self.sudoku.game_grid_maker(
             constants.ANSWER_GRID)
 
@@ -18,7 +19,6 @@ class Director:
 
         while self.is_playing:
             # displays sudoku grid
-            # TODO: display sudoku grid
             self.sudoku.print_board(constants.GAME_GRID)
             # displays actions for the user to choose
             self.action.actions()
@@ -26,5 +26,6 @@ class Director:
             self.action.todo()
             if self.action.instruction == 3:
                 break
+            self.handling.print_board(constants.GAME_GRID)
 
         self.is_playing = False
