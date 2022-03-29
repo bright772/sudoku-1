@@ -10,11 +10,9 @@ class SelectAction:
 
     def actions(self):
         "Displays action. User enters a number."
-        print()
-        print("1. Play game")
+        print("\n1. Play game")
         print("2. Delete a number")
-        print("3. Exit game")
-        print()
+        print("3. Exit game\n")
         self.instruction = int(input("Enter a number, selecting an action: "))
 
 
