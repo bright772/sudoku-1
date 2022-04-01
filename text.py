@@ -27,6 +27,7 @@ class Prompts:
                 # This input only accepts 1-9 now. Anything else prints the invalid entry message
                 self.row = int(input("Choose a row (1-9): "))
                 if self.row in constants.ROW_NUMBERS:
+                    print(f"self.row: {self.row}")
                     break
                 else:
                     print("Invalid entry.")
@@ -43,3 +44,5 @@ class Prompts:
                     print("Invalid entry.")
             except:
                 print("Invalid entry.")
+        print(f"self.row: {self.row}")
+        # return self

@@ -1,6 +1,7 @@
 from action import Action
 from sudoku import Sudoku
 from sudoku_handling import Handling
+from text import Prompts
 import constants
 
 
@@ -11,6 +12,7 @@ class Director:
         self.action = Action()
         self.sudoku = Sudoku()
         self.handling = Handling()
+        self.text = Prompts()
         constants.GAME_GRID = self.sudoku.game_grid_maker(
             constants.ANSWER_GRID)
 
@@ -26,6 +28,7 @@ class Director:
             self.action.todo()
             if self.action.instruction == 3:
                 break
-            self.handling.print_board(constants.GAME_GRID)
+            print(f"self.text.row: {self.text.row}") #TODO: This value is 0. self.text.row is not holding the variable from the input.
+            # self.handling.num_inserter() #TODO: This has to be disabled until we can get self.text to hold the variables properly
 
         self.is_playing = False
