@@ -14,6 +14,7 @@ ANSWER_GRID = [
 ]
 
 GAME_GRID = []
+GAME_GRID_BLANK = []
 
 COLUMN = ""
 ROW = 0

@@ -16,6 +16,7 @@ class Prompts:
                 # This input only accepts A-I now. Anything else prints the invalid entry message
                 self.column = input("Choose a column (A-I): ").upper()
                 if self.column in constants.COLUMN_LETTERS:
+                    constants.COLUMN = self.column
                     break
                 else:
                     print("Invalid entry.")
@@ -27,7 +28,8 @@ class Prompts:
                 # This input only accepts 1-9 now. Anything else prints the invalid entry message
                 self.row = int(input("Choose a row (1-9): "))
                 if self.row in constants.ROW_NUMBERS:
-                    print(f"self.row: {self.row}")
+                    constants.ROW = self.row
+                    # print(f"self.row: {constants.ROW}")
                     break
                 else:
                     print("Invalid entry.")
@@ -39,10 +41,11 @@ class Prompts:
                 self.number = int(
                     input("Choose a number to insert in the box (1-9): "))  # This input only accepts 1-9 now. Anything else prints the invalid entry message
                 if self.number in constants.ROW_NUMBERS:
+                    constants.NUMBER = self.number
                     break
                 else:
                     print("Invalid entry.")
             except:
                 print("Invalid entry.")
-        print(f"self.row: {self.row}")
+        # print(f"self.row: {constants.ROW}")
         # return self

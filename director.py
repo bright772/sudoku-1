@@ -13,8 +13,8 @@ class Director:
         self.sudoku = Sudoku()
         self.handling = Handling()
         self.text = Prompts()
-        constants.GAME_GRID = self.sudoku.game_grid_maker(
-            constants.ANSWER_GRID)
+        constants.GAME_GRID = self.sudoku.game_grid_maker(constants.ANSWER_GRID)
+        constants.GAME_GRID_BLANK = constants.GAME_GRID
 
     def start_game(self):
         print("Welcome to the Sudoku Game!")
@@ -28,7 +28,8 @@ class Director:
             self.action.todo()
             if self.action.instruction == 3:
                 break
-            print(f"self.text.row: {self.text.row}") #TODO: This value is 0. self.text.row is not holding the variable from the input.
-            # self.handling.num_inserter() #TODO: This has to be disabled until we can get self.text to hold the variables properly
+            # print(f"constants.ROW: {constants.ROW}") 
+            self.handling.num_inserter() 
+            self.handling.win_checker()
 
         self.is_playing = False

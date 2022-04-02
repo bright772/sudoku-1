@@ -19,7 +19,7 @@ class Sudoku:
     # col_letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
     # row_nums = [1,2,3,4,5,6,7,8,9]
 
-    def game_grid_maker(self, grid, difficulty_variable=4):
+    def game_grid_maker(self, grid, difficulty_variable=3):
         """Takes an answer grid and removes a certain amount of variables from each line (difficulty variable)"""
         game_grid = []  # The grid that the player will see
         for row in grid:
