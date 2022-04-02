@@ -35,5 +35,5 @@ The project files are organized as follows:
 
 ## Authors
 
-Aaron Eardly
-Emily Castillo
+- Aaron Eardly
+- Emily Castillo
