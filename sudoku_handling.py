@@ -1,6 +1,7 @@
 from sudoku import Sudoku
 from text import Prompts
 import constants
+from sys import exit
 
 
 class Handling():
@@ -25,8 +26,6 @@ class Handling():
             constants.GAME_GRID[row_index].insert(
                 column_index, constants.NUMBER)
             # print(constants.NUMBER)
-        else:
-            print("You can only insert a number into a blank space.")
 
     def num_deleter(self):
         """Deletes a number according to user's input"""
@@ -47,3 +46,4 @@ class Handling():
         # compares actual grid with the correct answer grid
         if constants.GAME_GRID == constants.ANSWER_GRID:
             print("YAY! You Won!")
+            exit()

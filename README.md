@@ -32,3 +32,7 @@ The project files are organized as follows:
 ---
 
 - Python 3.8.0
+
+##Authors
+Aaron Eardly
+Emily Castillo

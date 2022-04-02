@@ -3,7 +3,7 @@ import constants
 
 
 class Sudoku:
-    """Creates and displays sudoku board"""
+    """Creates and displays the sudoku board"""
 
     def game_grid_maker(self, grid, difficulty_variable=3):
         """Takes an answer grid and removes a certain amount of variables from each line (difficulty variable)"""
