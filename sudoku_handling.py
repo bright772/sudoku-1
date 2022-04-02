@@ -43,7 +43,8 @@ class Handling():
         for row in constants.GAME_GRID: 
             if " " in row: #Checks each row in the game grid for a space. If it finds one, this function ends.
                 return #the game will continue until the grid is full.
-           
+        
+        #TODO: make the win condition. My idea was to compare if GAME_GRID == ANSWER_GRID is a win, anything else resets the game by making GAME_GRID = GAME_GRID_BLANK
         
     
         
