@@ -45,5 +45,5 @@ class Handling():
 
         # compares actual grid with the correct answer grid
         if constants.GAME_GRID == constants.ANSWER_GRID:
-            print("YAY! You Won!")
+            print("YAY! You completed the Sudoku!")
             exit()
