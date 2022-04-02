@@ -24,7 +24,7 @@ class Handling():
             constants.GAME_GRID[row_index].pop(column_index)
             constants.GAME_GRID[row_index].insert(
                 column_index, constants.NUMBER)
-            print(constants.NUMBER)
+            # print(constants.NUMBER)
         else:
             print("You can only insert a number into a blank space.")
 
@@ -44,5 +44,6 @@ class Handling():
             if " " in row:  # Checks each row in the game grid for a space. If it finds one, this function ends.
                 return  # the game will continue until the grid is full.
 
-        # TODO: make the win condition. My idea was to compare if GAME_GRID == ANSWER_GRID
-        # is a win, anything else resets the game by making GAME_GRID = GAME_GRID_BLANK
+        # compares actual grid with the correct answer grid
+        if constants.GAME_GRID == constants.ANSWER_GRID:
+            print("YAY! You Won!")
