@@ -37,8 +37,6 @@ class Handling():
             constants.GAME_GRID[row_index].pop(column_index)
             constants.GAME_GRID[row_index].insert(
                 column_index, constants.NUMBER)
-        else:
-            print("You can only insert a number into a blank space.")
 
     def win_checker(self):
         """"Checks when the user wins"""
