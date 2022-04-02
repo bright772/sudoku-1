@@ -1,7 +1,6 @@
 from sudoku import Sudoku
 from text import Prompts
 import constants
-from main import GameBoard
 
 
 class Handling():
