@@ -21,7 +21,7 @@ class Prompts:
                 else:
                     print("Invalid entry.")
             except:
-                pass
+                print("Invalid entry.")
 
         while True:
             try:

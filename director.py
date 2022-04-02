@@ -1,7 +1,6 @@
 from action import Action
 from sudoku import Sudoku
 from sudoku_handling import Handling
-from text import Prompts
 import constants
 
 
@@ -13,7 +12,6 @@ class Director:
         self.action = Action()
         self.sudoku = Sudoku()
         self.handling = Handling()
-        self.text = Prompts()
         constants.GAME_GRID = self.sudoku.game_grid_maker(
             constants.ANSWER_GRID)
         constants.GAME_GRID_BLANK = constants.GAME_GRID
