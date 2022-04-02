@@ -13,6 +13,7 @@ class Handling():
         self.game_grid = constants.GAME_GRID
 
     def num_inserter(self):
+        """Inserts a number according to user's input"""
         # print(f"constants.ROW_NUMBERS: {constants.ROW_NUMBERS}")
         # print(f"constants.ROW: {constants.ROW}") #TODO: This only prints 0. self.text.row is the issue.
         row_index = constants.ROW_NUMBERS.index(constants.ROW)
@@ -28,6 +29,7 @@ class Handling():
             print("You can only insert a number into a blank space.")
 
     def win_checker(self):
+        """"Checks when the user wins"""
         for row in constants.GAME_GRID:
             if " " in row:  # Checks each row in the game grid for a space. If it finds one, this function ends.
                 return  # the game will continue until the grid is full.
