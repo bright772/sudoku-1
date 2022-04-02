@@ -33,6 +33,6 @@ class Director:
             # print(f"constants.ROW: {constants.ROW}")
             self.handling.num_inserter()
             self.handling.num_deleter()
-            self.handling.win_checker()
+            self.handling.win_checker(self.is_playing)
 
         self.is_playing = False
