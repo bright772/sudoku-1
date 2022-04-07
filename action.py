@@ -10,10 +10,19 @@ class SelectAction:
 
     def actions(self):
         "Displays action. User enters a number."
-        print("\n1. Play game")
-        print("2. Delete a number")
-        print("3. Exit game\n")
-        self.instruction = int(input("Enter a number, selecting an action: "))
+        print("\n1. Enter number") # print("\n1. Play game")
+        # print("2. Delete a number")
+        print("2. Exit game\n")
+        while True:
+            try:
+                # Restrict user input.
+                self.instruction = int(input("Enter a number, selecting an action: "))
+                if self.instruction in [1, 2]:
+                    break
+                else:
+                    print("Invalid entry.")
+            except:
+                print("Invalid entry.")
 
 
 class Action(SelectAction):
@@ -27,10 +36,10 @@ class Action(SelectAction):
         "Determines what to do according to user's input"
 
         if self.instruction == 1:
-            print(self.prompt.input())
+            self.prompt.input()
+
+        # elif self.instruction == 2:
+            # print(self.prompt.input())
 
         elif self.instruction == 2:
-            print(self.prompt.input())
-
-        elif self.instruction == 3:
             print("Game Over. Thanks for playing.")
