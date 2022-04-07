@@ -47,3 +47,18 @@ class Sudoku:
             counter += 1
     # printing the grid for testing purposes.
     # print_board(game_grid_maker(constants.ANSWER_GRID))
+
+    def choose_board(self):
+        chooser = randint(1, 6)
+        if chooser == 1:
+            return constants.ANSWER_GRID1
+        elif chooser == 2:
+            return constants.ANSWER_GRID2
+        elif chooser == 3:
+            return constants.ANSWER_GRID3
+        elif chooser == 4:
+            return constants.ANSWER_GRID4
+        elif chooser == 5:
+            return constants.ANSWER_GRID5
+        elif chooser == 6:
+            return constants.ANSWER_GRID6
