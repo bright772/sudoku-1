@@ -32,7 +32,7 @@ class Handling():
             constants.GAME_GRID[row_index].insert(
                 column_index, constants.NUMBER)
 
-    def win_checker(self, is_playing):
+    def win_checker(self, is_playing, ANSWER_GRID):
         """Checks when the user wins"""
         for row in constants.GAME_GRID:
             if " " in row:  # Checks each row in the game grid for a space. If it finds one, this function ends.
@@ -42,18 +42,18 @@ class Handling():
         winning = True
         for i in range(len(constants.COLUMN_LETTERS)):
             for j in range(len(constants.COLUMN_LETTERS)):
-                if constants.GAME_GRID[i][j] == constants.ANSWER_GRID[i][j] and winning == True:
+                if constants.GAME_GRID[i][j] == ANSWER_GRID[i][j] and winning == True:
                     winning = True
                 else:
                     winning = False
                 
         
         if winning:
-            print("Yes! You won the game!")
+            print("Yes! You completed the sudoku!")
             is_playing = False
             return is_playing
         else:
-            print("You lost the game.")
+            print("You failed...")
             is_playing = False
             return is_playing
 
