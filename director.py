@@ -14,8 +14,8 @@ class Director:
         self.sudoku = Sudoku()
         self.handling = Handling()
         self.text = Prompts()
-        constants.GAME_GRID = self.sudoku.game_grid_maker(
-            constants.ANSWER_GRID)
+        self.ANSWER_GRID = self.sudoku.choose_board() # random boards
+        constants.GAME_GRID = self.sudoku.game_grid_maker(self.ANSWER_GRID)
         constants.GAME_GRID_BLANK = constants.GAME_GRID
 
     def start_game(self):
@@ -28,11 +28,11 @@ class Director:
             # displays actions for the user to choose
             self.action.actions()
             self.action.todo()
-            if self.action.instruction == 3:
+            if self.action.instruction == 2: # 3:
                 break
             # print(f"constants.ROW: {constants.ROW}")
             self.handling.num_inserter()
             self.handling.num_deleter()
-            self.handling.win_checker(self.is_playing)
+            self.is_playing = self.handling.win_checker(self.is_playing, self.ANSWER_GRID)
 
         self.is_playing = False
